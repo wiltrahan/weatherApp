@@ -1,5 +1,11 @@
 var myKey = config.token;
 
+var skycons = new Skycons({"color": "black"});
+
+// skycons.add("animated-icon", Skycons.rain);
+
+// skycons.play();
+
 var model = {
   weatherInfo: []
 };
@@ -17,6 +23,7 @@ function showPosition(position) {
   var lat = position.coords.latitude;
   var long = position.coords.longitude;
   getWeatherInfo(lat, long, render);
+  console.log(lat, long);
 }
 
 $(window).on("load", function() {
@@ -42,7 +49,18 @@ function getWeatherInfo(latitude, longitude, callback) {
 
 function render() {
   var temp = document.getElementById('temp');
-  var currently = model.weatherInfo.apparentTemperature;
-  temp.innerHTML = "The Temperature is " + Math.round(currently);
+  var sky = document.getElementById('sky');
+  var weatherIcon = document.getElementById('animated-icon');
 
+
+  var currently = model.weatherInfo.apparentTemperature;
+  var summary = model.weatherInfo.summary;
+  var icon = model.weatherInfo.icon;
+  temp.innerHTML = "The Temperature is " + Math.round(currently);
+  sky.innerHTML = summary;
+  weatherIcon = skycons.add("animated-icon", icon);
+  skycons.play();
 };
+
+
+
