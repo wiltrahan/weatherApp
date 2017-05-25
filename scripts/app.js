@@ -1,7 +1,7 @@
 var myKey = config.token;
 var googleKey = config.googleToken;
 
-var skycons = new Skycons({"color": "black"});
+var skycons = new Skycons({"color": "#F5E5CB"});
 
 var model = {
   weatherInfo: [],
@@ -76,9 +76,9 @@ function render() {
 
   var myCity = model.cityName[0].address_components[2].long_name;
 
-  temp.innerHTML = "The Temperature is " + Math.round(currently);
-  city.innerHTML = myCity;
-  sky.innerHTML = summary;
+  temp.innerHTML = "The Temperature is " + Math.round(currently) + " degrees.";
+  city.innerHTML = "Welcome to " + myCity + "!";
+  sky.innerHTML = "Today will be " + summary + ".";
 
   weatherIcon = skycons.add("animated-icon", icon);
   skycons.play();

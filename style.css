@@ -1,3 +1,12 @@
 body {
-  background-color: lightgrey;
+  background-color: #2A2C2B;
+}
+p {
+  color: #DC3522;
+}
+p#city{
+  font-size: 3em;
+}
+.info {
+  font-size: 2em;
 }
