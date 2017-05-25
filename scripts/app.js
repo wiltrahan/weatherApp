@@ -1,7 +1,7 @@
 var myKey = config.token;
 var googleKey = config.googleToken;
 
-var skycons = new Skycons({"color": "#F5E5CB"});
+var skycons = new Skycons({"color": "#374140"});
 
 var model = {
   weatherInfo: [],
@@ -47,7 +47,7 @@ function getCityName(latitude, longitude, callback) {
 }
 
 //5 getWeatherInfo takes the lat/long and gets the weather for that loc
-//the callback, render is called
+//the callback, render and startTime is called
 function getWeatherInfo(latitude, longitude, callback) {
 
   $.ajax({
@@ -56,6 +56,7 @@ function getWeatherInfo(latitude, longitude, callback) {
       model.weatherInfo = data.currently;
       console.log(model.weatherInfo);
       callback();
+      startTime();
     },
     error : function(err) {
       console.log("Something went wrong.");
@@ -89,5 +90,26 @@ function render() {
 //1 window loads, calls getLocation()
 $(window).on("load", function() {
     getLocation();
+
 });
 
+function startTime() {
+  var currentTime = new Date(),
+      hours = currentTime.getHours(),
+      minutes = currentTime.getMinutes();
+
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+
+  var suffix = "AM";
+
+  if (hours >= 12) {
+    suffix = "PM";
+    hours = hours - 12;
+  }
+  if (hours == 0) {
+      hours = 12;
+  }
+  document.getElementById('time').innerHTML = hours + ":" + minutes + " " + suffix;
+}

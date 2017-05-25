@@ -1,12 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Kumar+One|Roboto');
+
+@font-face {
+    font-family: blowBrush;
+    src: url('blowbrush.otf');
+}
+@font-face {
+    font-family: digital;
+    src: url(digital-7.regular.ttf);
+}
+
+
 body {
-  background-color: #2A2C2B;
+  background-color: #F5E5CB;
 }
 p {
   color: #DC3522;
 }
 p#city{
-  font-size: 3em;
+  font-size: 60px;
+  font-family: 'Kumar One', cursive;
 }
 .info {
   font-size: 2em;
+  font-family: 'Roboto', sans-serif;
+}
+#main {
+  margin-top: 80px;
+}
+
+#time {
+  font-family: digital;
+  font-size: 120px;
 }
