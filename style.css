@@ -9,26 +9,45 @@
     src: url(digital-7.regular.ttf);
 }
 
+html {
+  height: 100%;
+}
 
 body {
-  background-color: #F5E5CB;
+  background-color: #1E1E20;
+  font-family: digital;
+  color: #1EFF20;
+  border: 1px dashed #1EFF20;
+  min-height: 100%;
 }
-p {
-  color: #DC3522;
-}
+
 p#city{
-  font-size: 60px;
-  font-family: 'Kumar One', cursive;
+  font-size: 100px;
+
 }
 .info {
-  font-size: 2em;
-  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+
 }
 #main {
   margin-top: 80px;
 }
 
 #time {
-  font-family: digital;
   font-size: 120px;
 }
+
+/*#temp {
+  width: 114px;
+}*/
+.btn {
+  display: none;
+  background-color: #242426;
+  border:0px solid transparent;
+
+}
+.btn:focus {
+  outline:0;
+}
+
+/*focus {outline:0;}*/
