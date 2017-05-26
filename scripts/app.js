@@ -1,7 +1,7 @@
 var myKey = config.token;
 var googleKey = config.googleToken;
 
-var skycons = new Skycons({"color": "#1EFF20"});
+var skycons = new Skycons({"color": "#DC3522"});
 
 var model = {
   weatherInfo: [],
@@ -90,11 +90,6 @@ $(document).ready(function(){
     $('.btn').show();
   };
 
-
-  //1 window loads, calls getLocation()
-  // $(window).on("load", function() {
-  //     getLocation();
-  // });
 
   function startTime() {
     var currentTime = new Date(),

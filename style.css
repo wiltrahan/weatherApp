@@ -16,8 +16,8 @@ html {
 body {
   background-color: #1E1E20;
   font-family: digital;
-  color: #1EFF20;
-  border: 1px dashed #1EFF20;
+  /*color: #1EFF20;*/
+  color: #DC3522;
   min-height: 100%;
 }
 
