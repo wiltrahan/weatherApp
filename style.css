@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Kumar+One|Roboto');
 
 @font-face {
-    font-family: blowBrush;
-    src: url('blowbrush.otf');
-}
-@font-face {
     font-family: digital;
     src: url(digital-7.regular.ttf);
 }
